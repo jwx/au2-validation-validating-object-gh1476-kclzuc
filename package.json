@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@aurelia/kernel": "2.0.1-dev.202207260540",
+    "@aurelia/router": "2.0.1-dev.202207260540",
+    "@aurelia/router-lite": "2.0.1-dev.202207260540",
+    "@aurelia/runtime-html": "2.0.1-dev.202207260540",
+    "@aurelia/validation": "2.0.1-dev.202207260540",
+    "@aurelia/validation-html": "2.0.1-dev.202207260540",
+    "aurelia": "2.0.1-dev.202207260540",
+    "tslib": "2.4.0"
+  }
+}

@@ -1,0 +1,25 @@
+<small>
+  <i
+    >How to replicate issue:
+    <ol>
+      <li>go to "Page 1"</li>
+      <li>click submit</li>
+      <li>check the error messages. Should be 2 (all good until here)</li>
+      <li>now, go to "Page 2"</li>
+      <li>go back to "Page 1"</li>
+      <li>click submit</li>
+      <li>
+        check the error message. There is only 1 now. Also, check the console:
+        the validationController has no bindings
+      </li>
+    </ol>
+  </i>
+</small>
+
+<hr />
+My app
+<br />
+<a href="/">Page 1</a> |
+<a href="/page2">Page 2</a>
+<br />
+<au-viewport default="home"></au-viewport>

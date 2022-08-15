@@ -1,0 +1,42 @@
+<form submit.trigger="submit()" validation-errors.from-view="errors">
+  <input value.bind="person.name & validate" placeholder="Name" />
+  <input value.bind="person.age & validate" placeholder="Age" />
+
+  <button click.delegate="toggleAddresses()">activate addresses</button>
+
+  <div if.bind="person.addresses">
+    Add addresses here:
+    <br />
+    <div repeat.for="address of person.addresses">
+      <input value.bind="address.name & validate" placeholder="Name" />
+      <input
+        value.bind="address.percentage & validate"
+        placeholder="Percentage"
+      />
+
+      <button click.delegate="removeAddress($index)">Remove</button>
+    </div>
+
+    <button click.delegate="addAddress()">Add address</button>
+  </div>
+
+  <hr />
+
+  <button>Submit</button>
+
+  <hr />
+  Errors:
+  <ul>
+    <li repeat.for="r of errors">${r.result.message}</li>
+  </ul>
+</form>
+<hr />
+.ensureObject errors():
+<ul>
+  <li
+    repeat.for="r of validationController.results"
+    if.bind="!r.valid && !r.propertyName"
+  >
+    ${r.message}
+  </li>
+</ul>
